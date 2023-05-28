@@ -9,6 +9,7 @@ col = [0, -1, 1, 0]
 def isValid(mat, visited, row, col):
     return (row >= 0) and (row < ctrok) and (col >= 0) and (col < ctolbez)  and mat[row][col] == 1 and not visited[row][col]
  
+
 def Shortest_length(mat, start, end):
  
     i, j = start
@@ -25,7 +26,7 @@ def Shortest_length(mat, start, end):
 
     q.append((i, j, 0))
 
-    min_put = sys.maxi
+    min_put = sys.maxsize
 
     while q:
         (i, j, dist) = q.popleft()
@@ -38,7 +39,7 @@ def Shortest_length(mat, start, end):
                 visited[i + row[k]][j + col[k]] = True
                 q.append((i + row[k], j + col[k], dist + 1))
  
-    if min_put != sys.maxi:
+    if min_put != sys.maxsize:
         return min_put
     else:
         return -1
@@ -63,7 +64,6 @@ if __name__ == '__main__':
                 matriza[i - 1].append(1)
                 end = (i - 1, j)
 
-    pprint.pprint(matriza)
     min_put = Shortest_length(matriza, start, end)
  
     if min_put != -1:
