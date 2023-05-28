@@ -200,7 +200,7 @@ namespace РГР_по_проге_2_семестр
                 while (g == true)
                 {
                     Console.Clear();
-                    string[] menu = new string[5] {"Выбори всех изданий по теме ", "Выбор по теме", "Выбор по годам", "Выбор по наличию фонда библиотеки", "Выход" };
+                    string[] menu = new string[5] {"Все издания по теме", "Выбор по теме", "Выбор по годам", "Выбор по наличию фонда библиотеки", "Выход" };
                     Console.WriteLine($"{menu[0]}\n{menu[1]}\n{menu[2]}\n{menu[3]}\n{menu[4]}");
                     Console.SetCursorPosition(40, 0);
                     bool t = true;
